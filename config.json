@@ -1,0 +1,25 @@
+{
+  "name": "Influx backup",
+  "version": "0.1",
+  "slug": "hassio-influx-backup",
+  "description": "Does backup the given influxdb database. The archive is shared in the /share folder.",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "map": ["share:rw", "backup:rw"],
+  "startup": "before",
+  "boot": "auto",
+  "ports": {},
+  "options": {
+    "database": {
+      "name": "database_name",
+      "host": "influxDb_host:8088",
+      "cron":"10 1 * * *"
+    }
+  },
+  "schema": {
+    "database": {
+      "name": "str",
+      "host": "str",
+      "cron": "str"
+    }
+  }
+}

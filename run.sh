@@ -2,6 +2,8 @@
 
 cat /data/options.json
 
+python3 /influx-backup/cron-influx-backup.py
+
 # TMP_DIR="/tmp/influx-backup"
 # DB_NAME="home_assistant"
 

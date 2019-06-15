@@ -1,0 +1,19 @@
+{
+  "name": "Influx backup",
+  "version": "0.1",
+  "slug": "hassio-influx-backup",
+  "description": "",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "map": ["share:rw", "backup:rw"],
+  "startup": "before",
+  "boot": "auto",
+  "ports": {},
+  "options": {
+    "database": {
+      "name": "home_assistant",
+      "host": "53caca22-influxdb:8088",
+      "cron": "30 0 * * *"
+    }
+  },
+  "schema": {}
+}
